@@ -1,0 +1,23 @@
+{
+  "name": "sigef",
+  "version": "1.0.0",
+  "description": "SIGEF - Sistema de gestión de estacionamiento para estaciones ferroviarias (Tren México–Querétaro)",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "reset-db": "node -e \"require('fs').rmSync('data/db.json',{force:true});console.log('DB reiniciada; se regenerará al iniciar')\""
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "qrcode": "^1.5.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.0.0",
+    "@types/qrcode": "^1.5.5",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0"
+  }
+}
